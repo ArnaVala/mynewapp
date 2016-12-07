@@ -1,0 +1,101 @@
+2016-12-07T14:31:39.716684+00:00 app[web.1]:                      pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+2016-12-07T14:31:39.716685+00:00 app[web.1]:              (SELECT c.collname FROM pg_collation c, pg_type t
+2016-12-07T14:31:39.716686+00:00 app[web.1]:                WHERE c.oid = a.attcollation AND t.oid = a.atttypid AND a.attcollation <> t.typcollation),
+2016-12-07T14:31:39.716686+00:00 app[web.1]:                      col_description(a.attrelid, a.attnum) AS comment
+2016-12-07T14:31:39.716688+00:00 app[web.1]:                   ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+2016-12-07T14:31:39.716687+00:00 app[web.1]:                 FROM pg_attribute a LEFT JOIN pg_attrdef d
+2016-12-07T14:31:39.716688+00:00 app[web.1]:                WHERE a.attrelid = '"products"'::regclass
+2016-12-07T14:31:39.716689+00:00 app[web.1]:                  AND a.attnum > 0 AND NOT a.attisdropped
+2016-12-07T14:31:39.716690+00:00 app[web.1]:                ORDER BY a.attnum
+2016-12-07T14:31:39.716690+00:00 app[web.1]: ):
+2016-12-07T14:31:39.716766+00:00 app[web.1]: F, [2016-12-07T14:31:39.716679 #4] FATAL -- : [fd42dc7f-d782-42b7-9456-1816596e5b22]   
+2016-12-07T14:31:39.716809+00:00 app[web.1]: F, [2016-12-07T14:31:39.716744 #4] FATAL -- : [fd42dc7f-d782-42b7-9456-1816596e5b22] app/controllers/products_controller.rb:17:in `new'
+2016-12-07T14:33:18.488921+00:00 heroku[router]: at=info method=GET path="/" host=bikeberlininberlin.herokuapp.com request_id=06078fab-9a6b-4da4-80f9-cdfe0b72dc02 fwd="197.133.185.88" dyno=web.1 connect=1ms service=100ms status=200 bytes=4137
+2016-12-07T14:33:18.468478+00:00 app[web.1]: I, [2016-12-07T14:33:18.468242 #4]  INFO -- : [06078fab-9a6b-4da4-80f9-cdfe0b72dc02] Started GET "/" for 197.133.185.88 at 2016-12-07 14:33:18 +0000
+2016-12-07T14:33:18.482699+00:00 app[web.1]: I, [2016-12-07T14:33:18.482566 #4]  INFO -- : [06078fab-9a6b-4da4-80f9-cdfe0b72dc02] Processing by StaticPagesController#index as HTML
+2016-12-07T14:33:18.484878+00:00 app[web.1]: I, [2016-12-07T14:33:18.484805 #4]  INFO -- : [06078fab-9a6b-4da4-80f9-cdfe0b72dc02]   Rendering static_pages/index.html.erb within layouts/application
+2016-12-07T14:33:18.485430+00:00 app[web.1]: I, [2016-12-07T14:33:18.485370 #4]  INFO -- : [06078fab-9a6b-4da4-80f9-cdfe0b72dc02]   Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+2016-12-07T14:33:18.486492+00:00 app[web.1]: I, [2016-12-07T14:33:18.486429 #4]  INFO -- : [06078fab-9a6b-4da4-80f9-cdfe0b72dc02] Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+2016-12-07T15:06:29.789541+00:00 heroku[web.1]: Idling
+2016-12-07T15:06:29.790114+00:00 heroku[web.1]: State changed from up to down
+2016-12-07T15:06:30.507784+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2016-12-07T15:06:30.557989+00:00 app[web.1]: - Gracefully stopping, waiting for requests to finish
+2016-12-07T15:06:30.561912+00:00 app[web.1]: === puma shutdown: 2016-12-07 15:06:30 +0000 ===
+2016-12-07T15:06:30.561977+00:00 app[web.1]: - Goodbye!
+2016-12-07T15:06:30.563971+00:00 app[web.1]: Exiting
+2016-12-07T15:06:31.046537+00:00 heroku[web.1]: Process exited with status 0
+2016-12-07T16:56:35.634268+00:00 heroku[run.3207]: State changed from starting to up
+2016-12-07T16:56:35.570460+00:00 heroku[run.3207]: Awaiting client
+2016-12-07T16:56:35.613043+00:00 heroku[run.3207]: Starting process with command `rails db:migrate`
+2016-12-07T16:56:45.232529+00:00 heroku[run.3207]: State changed from up to complete
+2016-12-07T16:56:45.216447+00:00 heroku[run.3207]: Process exited with status 0
+2016-12-07T16:57:09.882391+00:00 heroku[web.1]: Unidling
+2016-12-07T16:57:09.882669+00:00 heroku[web.1]: State changed from down to starting
+2016-12-07T16:57:13.071243+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 40746 -e production`
+2016-12-07T16:57:17.741780+00:00 app[web.1]: => Booting Puma
+2016-12-07T16:57:17.741830+00:00 app[web.1]: => Rails 5.0.0.1 application starting in production on http://0.0.0.0:40746
+2016-12-07T16:57:17.741832+00:00 app[web.1]: => Run `rails server -h` for more startup options
+2016-12-07T16:57:19.124056+00:00 app[web.1]: Puma starting in single mode...
+2016-12-07T16:57:19.124073+00:00 app[web.1]: * Version 3.6.2 (ruby 2.2.6-p396), codename: Sleepy Sunday Serenity
+2016-12-07T16:57:19.124075+00:00 app[web.1]: * Min threads: 5, max threads: 5
+2016-12-07T16:57:19.124090+00:00 app[web.1]: * Environment: production
+2016-12-07T16:57:19.124235+00:00 app[web.1]: * Listening on tcp://0.0.0.0:40746
+2016-12-07T16:57:19.124578+00:00 app[web.1]: Use Ctrl-C to stop
+2016-12-07T16:57:19.377121+00:00 heroku[web.1]: State changed from starting to up
+2016-12-07T16:57:22.477833+00:00 app[web.1]: I, [2016-12-07T16:57:22.469179 #4]  INFO -- : [814d906b-e82a-4cc6-8423-90c61a347fa9] Started GET "/products" for 213.243.149.4 at 2016-12-07 16:57:22 +0000
+2016-12-07T16:57:22.494609+00:00 app[web.1]: I, [2016-12-07T16:57:22.494520 #4]  INFO -- : [814d906b-e82a-4cc6-8423-90c61a347fa9] Processing by ProductsController#index as HTML
+2016-12-07T16:57:22.527398+00:00 app[web.1]: I, [2016-12-07T16:57:22.527288 #4]  INFO -- : [814d906b-e82a-4cc6-8423-90c61a347fa9]   Rendering products/index.html.erb within layouts/application
+2016-12-07T16:57:22.612427+00:00 app[web.1]: D, [2016-12-07T16:57:22.612304 #4] DEBUG -- : [814d906b-e82a-4cc6-8423-90c61a347fa9]   [1m[36mProduct Load (82.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+2016-12-07T16:57:22.709752+00:00 app[web.1]: I, [2016-12-07T16:57:22.709663 #4]  INFO -- : [814d906b-e82a-4cc6-8423-90c61a347fa9]   Rendered products/index.html.erb within layouts/application (182.2ms)
+2016-12-07T16:57:22.717634+00:00 app[web.1]: I, [2016-12-07T16:57:22.717513 #4]  INFO -- : [814d906b-e82a-4cc6-8423-90c61a347fa9] Completed 200 OK in 223ms (Views: 26.9ms | ActiveRecord: 164.8ms)
+2016-12-07T16:57:22.719312+00:00 heroku[router]: at=info method=GET path="/products" host=bikeberlininberlin.herokuapp.com request_id=814d906b-e82a-4cc6-8423-90c61a347fa9 fwd="213.243.149.4" dyno=web.1 connect=0ms service=1432ms status=200 bytes=4120
+2016-12-07T16:57:23.108423+00:00 heroku[router]: sock=client at=warning code=H27 desc="Client Request Interrupted" method=GET path="/" host=bikeberlininberlin.herokuapp.com request_id=649400e4-e723-46f9-8034-e0cea551d88a fwd="213.243.149.4" dyno=web.1 connect=1ms service=1167ms status=499 bytes=
+2016-12-07T16:57:23.062611+00:00 app[web.1]: I, [2016-12-07T16:57:23.062430 #4]  INFO -- : [649400e4-e723-46f9-8034-e0cea551d88a] Started GET "/" for 213.243.149.4 at 2016-12-07 16:57:23 +0000
+2016-12-07T16:57:23.064367+00:00 app[web.1]: I, [2016-12-07T16:57:23.064307 #4]  INFO -- : [649400e4-e723-46f9-8034-e0cea551d88a] Processing by StaticPagesController#index as HTML
+2016-12-07T16:57:23.091157+00:00 app[web.1]: I, [2016-12-07T16:57:23.091027 #4]  INFO -- : [649400e4-e723-46f9-8034-e0cea551d88a]   Rendering static_pages/index.html.erb within layouts/application
+2016-12-07T16:57:23.092257+00:00 app[web.1]: I, [2016-12-07T16:57:23.092192 #4]  INFO -- : [649400e4-e723-46f9-8034-e0cea551d88a]   Rendered static_pages/index.html.erb within layouts/application (1.0ms)
+2016-12-07T16:57:23.105540+00:00 app[web.1]: I, [2016-12-07T16:57:23.105435 #4]  INFO -- : [649400e4-e723-46f9-8034-e0cea551d88a] Completed 200 OK in 41ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+2016-12-07T16:57:23.244308+00:00 heroku[router]: at=info method=GET path="/assets/application-c9b55e253667ec5a3b01f4987297a3cdab9cd89bf56a30f67b54ddd1caf09cc8.css" host=bikeberlininberlin.herokuapp.com request_id=82824302-db7e-4614-8f21-1c3141c897ef fwd="213.243.149.4" dyno=web.1 connect=9ms service=15ms status=304 bytes=48
+2016-12-07T16:57:23.384769+00:00 heroku[router]: at=info method=GET path="/assets/application-1d951023569b51582c97c9ab2740e389f060f23fc481c7f829a0382714995e28.js" host=bikeberlininberlin.herokuapp.com request_id=5862c478-fd44-48a8-8b8f-dbbfe3274bd0 fwd="213.243.149.4" dyno=web.1 connect=0ms service=2ms status=304 bytes=48
+2016-12-07T16:57:23.948262+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=bikeberlininberlin.herokuapp.com request_id=f9397846-3a4c-44f7-9ddb-878830016828 fwd="213.243.149.4" dyno=web.1 connect=0ms service=2ms status=304 bytes=48
+2016-12-07T16:59:28.269441+00:00 app[web.1]: I, [2016-12-07T16:59:28.269372 #4]  INFO -- : [b4515c96-298d-4596-ae43-d231dbb3ac24] Processing by ProductsController#new as HTML
+2016-12-07T16:59:28.457184+00:00 app[web.1]: I, [2016-12-07T16:59:28.457093 #4]  INFO -- : [b4515c96-298d-4596-ae43-d231dbb3ac24]   Rendering products/new.html.erb within layouts/application
+2016-12-07T16:59:28.477744+00:00 app[web.1]: I, [2016-12-07T16:59:28.477610 #4]  INFO -- : [b4515c96-298d-4596-ae43-d231dbb3ac24]   Rendered products/_form.html.erb (18.4ms)
+2016-12-07T16:59:28.266735+00:00 app[web.1]: I, [2016-12-07T16:59:28.266645 #4]  INFO -- : [b4515c96-298d-4596-ae43-d231dbb3ac24] Started GET "/products/new" for 213.243.149.4 at 2016-12-07 16:59:28 +0000
+2016-12-07T16:59:28.479380+00:00 app[web.1]: I, [2016-12-07T16:59:28.479330 #4]  INFO -- : [b4515c96-298d-4596-ae43-d231dbb3ac24] Completed 200 OK in 207ms (Views: 22.6ms | ActiveRecord: 165.0ms)
+2016-12-07T16:59:28.478067+00:00 app[web.1]: I, [2016-12-07T16:59:28.478011 #4]  INFO -- : [b4515c96-298d-4596-ae43-d231dbb3ac24]   Rendered products/new.html.erb within layouts/application (20.7ms)
+2016-12-07T16:59:28.487345+00:00 heroku[router]: at=info method=GET path="/products/new" host=bikeberlininberlin.herokuapp.com request_id=b4515c96-298d-4596-ae43-d231dbb3ac24 fwd="213.243.149.4" dyno=web.1 connect=0ms service=302ms status=200 bytes=4893
+2016-12-07T16:59:39.800885+00:00 app[web.1]: I, [2016-12-07T16:59:39.800800 #4]  INFO -- : [8cab6a80-ad34-41e7-9aad-e69dcb97266d] Started GET "/products/edit" for 213.243.149.4 at 2016-12-07 16:59:39 +0000
+2016-12-07T16:59:39.802118+00:00 app[web.1]: I, [2016-12-07T16:59:39.802039 #4]  INFO -- : [8cab6a80-ad34-41e7-9aad-e69dcb97266d] Processing by ProductsController#show as HTML
+2016-12-07T16:59:39.802200+00:00 app[web.1]: I, [2016-12-07T16:59:39.802154 #4]  INFO -- : [8cab6a80-ad34-41e7-9aad-e69dcb97266d]   Parameters: {"id"=>"edit"}
+2016-12-07T16:59:40.041689+00:00 app[web.1]: D, [2016-12-07T16:59:40.041577 #4] DEBUG -- : [8cab6a80-ad34-41e7-9aad-e69dcb97266d]   [1m[36mProduct Load (77.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+2016-12-07T16:59:40.043037+00:00 app[web.1]: I, [2016-12-07T16:59:40.042986 #4]  INFO -- : [8cab6a80-ad34-41e7-9aad-e69dcb97266d] Completed 404 Not Found in 241ms (ActiveRecord: 154.3ms)
+2016-12-07T16:59:40.044159+00:00 app[web.1]: F, [2016-12-07T16:59:40.044108 #4] FATAL -- : [8cab6a80-ad34-41e7-9aad-e69dcb97266d]   
+2016-12-07T16:59:40.044249+00:00 app[web.1]: F, [2016-12-07T16:59:40.044205 #4] FATAL -- : [8cab6a80-ad34-41e7-9aad-e69dcb97266d] ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=edit):
+2016-12-07T16:59:40.044311+00:00 app[web.1]: F, [2016-12-07T16:59:40.044269 #4] FATAL -- : [8cab6a80-ad34-41e7-9aad-e69dcb97266d]   
+2016-12-07T16:59:40.044396+00:00 app[web.1]: F, [2016-12-07T16:59:40.044329 #4] FATAL -- : [8cab6a80-ad34-41e7-9aad-e69dcb97266d] app/controllers/products_controller.rb:67:in `set_product'
+2016-12-07T16:59:40.048764+00:00 heroku[router]: at=info method=GET path="/products/edit" host=bikeberlininberlin.herokuapp.com request_id=8cab6a80-ad34-41e7-9aad-e69dcb97266d fwd="213.243.149.4" dyno=web.1 connect=0ms service=328ms status=404 bytes=1744
+2016-12-07T17:00:04.545062+00:00 app[web.1]: I, [2016-12-07T17:00:04.544984 #4]  INFO -- : [aef7f197-027d-44e4-afd5-631faae668a4] Started GET "/products/show" for 213.243.149.4 at 2016-12-07 17:00:04 +0000
+2016-12-07T17:00:04.546284+00:00 app[web.1]: I, [2016-12-07T17:00:04.546231 #4]  INFO -- : [aef7f197-027d-44e4-afd5-631faae668a4] Processing by ProductsController#show as HTML
+2016-12-07T17:00:04.546381+00:00 app[web.1]: I, [2016-12-07T17:00:04.546313 #4]  INFO -- : [aef7f197-027d-44e4-afd5-631faae668a4]   Parameters: {"id"=>"show"}
+2016-12-07T17:00:04.795334+00:00 app[web.1]: D, [2016-12-07T17:00:04.795225 #4] DEBUG -- : [aef7f197-027d-44e4-afd5-631faae668a4]   [1m[36mProduct Load (81.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+2016-12-07T17:00:04.798686+00:00 app[web.1]: F, [2016-12-07T17:00:04.798621 #4] FATAL -- : [aef7f197-027d-44e4-afd5-631faae668a4]   
+2016-12-07T17:00:04.797668+00:00 app[web.1]: I, [2016-12-07T17:00:04.797564 #4]  INFO -- : [aef7f197-027d-44e4-afd5-631faae668a4] Completed 404 Not Found in 251ms (ActiveRecord: 165.9ms)
+2016-12-07T17:00:04.798756+00:00 app[web.1]: F, [2016-12-07T17:00:04.798696 #4] FATAL -- : [aef7f197-027d-44e4-afd5-631faae668a4] ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=show):
+2016-12-07T17:00:04.798813+00:00 app[web.1]: F, [2016-12-07T17:00:04.798760 #4] FATAL -- : [aef7f197-027d-44e4-afd5-631faae668a4]   
+2016-12-07T17:00:04.798870+00:00 app[web.1]: F, [2016-12-07T17:00:04.798818 #4] FATAL -- : [aef7f197-027d-44e4-afd5-631faae668a4] app/controllers/products_controller.rb:67:in `set_product'
+2016-12-07T17:00:04.802825+00:00 heroku[router]: at=info method=GET path="/products/show" host=bikeberlininberlin.herokuapp.com request_id=aef7f197-027d-44e4-afd5-631faae668a4 fwd="213.243.149.4" dyno=web.1 connect=0ms service=342ms status=404 bytes=1744
+2016-12-07T17:03:25.554432+00:00 heroku[router]: at=info method=GET path="/" host=bikeberlininberlin.herokuapp.com request_id=ec0c3206-a211-4f17-beae-4718f6d23d6f fwd="213.243.149.4" dyno=web.1 connect=0ms service=82ms status=200 bytes=4137
+2016-12-07T17:03:25.537195+00:00 app[web.1]: I, [2016-12-07T17:03:25.537111 #4]  INFO -- : [ec0c3206-a211-4f17-beae-4718f6d23d6f] Started GET "/" for 213.243.149.4 at 2016-12-07 17:03:25 +0000
+2016-12-07T17:03:25.538204+00:00 app[web.1]: I, [2016-12-07T17:03:25.538087 #4]  INFO -- : [ec0c3206-a211-4f17-beae-4718f6d23d6f] Processing by StaticPagesController#index as HTML
+2016-12-07T17:03:25.539465+00:00 app[web.1]: I, [2016-12-07T17:03:25.539230 #4]  INFO -- : [ec0c3206-a211-4f17-beae-4718f6d23d6f]   Rendering static_pages/index.html.erb within layouts/application
+2016-12-07T17:03:25.539676+00:00 app[web.1]: I, [2016-12-07T17:03:25.539628 #4]  INFO -- : [ec0c3206-a211-4f17-beae-4718f6d23d6f]   Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+2016-12-07T17:03:25.540492+00:00 app[web.1]: I, [2016-12-07T17:03:25.540413 #4]  INFO -- : [ec0c3206-a211-4f17-beae-4718f6d23d6f] Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+2016-12-07T17:03:26.061618+00:00 heroku[router]: at=info method=GET path="/assets/berlinbikes-2-2f21224cf435828b3dc448cf05e82c9efd0b4d2cdc63502177b884ece410e237.jpg" host=bikeberlininberlin.herokuapp.com request_id=f35d0306-12e2-425a-876d-49cfe130b0e7 fwd="213.243.149.4" dyno=web.1 connect=0ms service=1ms status=304 bytes=48
+2016-12-07T17:03:32.340782+00:00 app[web.1]: I, [2016-12-07T17:03:32.340684 #4]  INFO -- : [5bd9354c-bac6-4987-a6df-88e21fe3e257] Started GET "/products" for 213.243.149.4 at 2016-12-07 17:03:32 +0000
+2016-12-07T17:03:32.341632+00:00 app[web.1]: I, [2016-12-07T17:03:32.341576 #4]  INFO -- : [5bd9354c-bac6-4987-a6df-88e21fe3e257] Processing by ProductsController#index as HTML
+2016-12-07T17:03:32.342717+00:00 app[web.1]: I, [2016-12-07T17:03:32.342660 #4]  INFO -- : [5bd9354c-bac6-4987-a6df-88e21fe3e257]   Rendering products/index.html.erb within layouts/application
+2016-12-07T17:03:32.424696+00:00 app[web.1]: D, [2016-12-07T17:03:32.424568 #4] DEBUG -- : [5bd9354c-bac6-4987-a6df-88e21fe3e257]   [1m[36mProduct Load (81.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+2016-12-07T17:03:32.425130+00:00 app[web.1]: I, [2016-12-07T17:03:32.425071 #4]  INFO -- : [5bd9354c-bac6-4987-a6df-88e21fe3e257]   Rendered products/index.html.erb within layouts/application (82.3ms)
+2016-12-07T17:03:32.425961+00:00 app[web.1]: I, [2016-12-07T17:03:32.425901 #4]  INFO -- : [5bd9354c-bac6-4987-a6df-88e21fe3e257] Completed 200 OK in 84ms (Views: 2.2ms | ActiveRecord: 81.3ms)
+2016-12-07T17:03:32.440068+00:00 heroku[router]: at=info method=GET path="/products" host=bikeberlininberlin.herokuapp.com request_id=5bd9354c-bac6-4987-a6df-88e21fe3e257 fwd="213.243.149.4" dyno=web.1 connect=0ms service=170ms status=200 bytes=4120
