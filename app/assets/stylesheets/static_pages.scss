@@ -190,6 +190,14 @@ h5 {
 	padding-top: 14px;
 }
 
+h6 {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+}
+
 a {
 	font-family: 'freight-sans-pro', sans-serif;
 	font-size: 14px;
@@ -262,6 +270,9 @@ a {
 	padding-top: 30px;
 }
 
+#no-pad {
+	padding: 0 !important;
+}
 /*Colors*/
 
 
@@ -303,7 +314,7 @@ a {
 	list-style: none;
 
 	li {
-		padding: 0 0 0 40px;
+		padding: 0px;
 		
 		a {
 			color: black;
@@ -345,9 +356,10 @@ a {
 	background-color: white;
 	margin: 0px;
 	text-align: center;
-
+	line-height: 90px;
+	
 	li {
-		padding: 0 0 0 40px;
+		padding: 0 0 0 40px !important;
 	}
 }
 

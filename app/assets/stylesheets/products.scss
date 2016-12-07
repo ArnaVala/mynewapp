@@ -1,0 +1,95 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/*VARIABLES*/
+$dark-blue: #2A363B;
+$teal: #136477;
+$lightgrey: #f1f1f1;
+$silver: #f0f4f4;
+$darkergrey: #2A363B;
+$darkpink: #E84A5F;
+$lightpink: #FF847C;
+$yellowish: #FECEA8;
+$retrogreen: #99B898;
+$grey: #aaaaaa;
+
+#new-product, #prod-database {
+	background-color: $lightpink;
+	padding-bottom: 90px;
+
+	@media (min-width: 1024px) {
+		background-color: $lightpink;
+  	background-image: -webkit-linear-gradient(0deg, #ffffff 50%, $lightpink 50%);
+  	height: auto;
+	}
+}
+
+.prod-info {
+	padding: 15px;
+
+	.img-responsive {
+		max-height: 400px;
+	}
+
+	h5,p,span {
+		margin-bottom: 12px;
+	}
+
+	h5 {
+	font-weight: 900;
+	}
+
+}
+
+span#prod-details {
+ 	display: inline-block;
+ 	margin: auto;
+ 	width: 50%;
+ 	color: $darkergrey;
+
+ 	a {
+ 		padding-right: 15px;
+
+ 	}
+}
+ 
+
+/*
+.new-button {
+
+	.btn {
+		background-color: $darkpink;
+		width: 100px;
+
+		a { 
+			color: white;
+		}
+
+		&:hover {
+			background-color: $lightpink;
+
+			a {
+				text-decoration: none;
+				color: $dark-blue;
+			}
+		}
+	}
+}
+
+.prod-table {
+
+	th, td {
+	padding: 30px !important;
+	}
+
+	th {
+		background-color: $dark-blue;
+		color: white;
+	}
+
+	td {
+		border-top: 2px solid white;
+	}
+}*/
+
+

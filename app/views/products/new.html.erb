@@ -1,0 +1,26 @@
+<section id="new-product">
+	<div class="container pad-top-half pad-bottom-half new-product">
+		<div class="row">
+			<div class="col-md-5 col-sm-12">
+				<h2>New Product</h2>
+			</div>
+			<div class="col-md-5 col-md-offset-2 col-sm-12">
+				<h5 class="">To add a new product to the Bike Berlin database, you must insert all of the following criteria.</h5>
+			</div>
+		</div>
+	</div>
+	<div class="container lightgrey-bg pad-sides pad-top-half pad-bottom-half prod-form">
+		<div class="row">
+			<div class="col-sm-12 pad lightgrey-bg">
+				<form>
+				<%= render 'form', product: @product %>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="container pad-top-half pad-bottom-half new-button">
+    <button class="btn">
+      <a><%= link_to 'Back', products_path %></a>
+    </button>
+  </div>
+</section
