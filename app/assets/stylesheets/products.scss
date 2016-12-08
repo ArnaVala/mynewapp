@@ -26,9 +26,11 @@ $grey: #aaaaaa;
 }
 
 .prod-info {
-	padding: 15px;
+	padding: 20px;
 
 	.img-responsive {
+		max-width: 100%;
+		margin: auto;
 		width: 100%;
 	}
 
@@ -79,6 +81,16 @@ span#prod-details {
 	}
 }
 
+#prod-price {
+	font-size: 18px;
+	color: $darkpink;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+#prod-colour {
+	font-weight: 900;
+}
 
 /*.prod-table {
 	th, td {

@@ -1,4 +1,4 @@
-<!--<p id="notice"><%= notice %></p>-->
+<p id="notice"><%= notice %></p>
 <section id="prod-show">
   <div class="container pad-top-half pad-bottom-half prod-show">
     <div class="row">
@@ -17,9 +17,9 @@
 				<%= link_to image_tag(@product.image_url, class: "img-responsive") %> <!--<%= @product.image_url %>-->
 			</div>
 			<div class="col-md-5 col-sm-12 text-under bottom-align-text">
-				<h3><%= @product.name %></h3>
-				<p><%= @product.description %></p>
-				<p><strong>Colour:</strong> <%= @product.colour %></p>
+				<h3><%= @product.colour %> <%= @product.name %></h3>
+        <p id="prod-price"><%= @product.price %>€</p>
+        <p><%= @product.description %></p>
 			</div>
 		</div>
 	</div>
