@@ -1,19 +1,34 @@
-<p id="notice"><%= notice %></p>
+<!--<p id="notice"><%= notice %></p>-->
+<section id="prod-show">
+  <div class="container pad-top-half pad-bottom-half prod-show">
+    <div class="row">
+      <div class="col-md-5 col-sm-12">
+        <h2>Product Info</h2>
+      </div>
+      <div class="col-md-5 col-md-offset-2 col-sm-12">
+        <h5 class="">Here you can find more detailed info about the bike.</h5>
+      </div>
+    </div>
+  </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+  <div class="container white-bg pad-top-half pad-bottom-quarter">
+		<div class="row bikes">
+			<div class="col-md-7 col-sm-12 prod-info">
+				<%= link_to image_tag(@product.image_url, class: "img-responsive") %> <!--<%= @product.image_url %>-->
+			</div>
+			<div class="col-md-5 col-sm-12 text-under bottom-align-text">
+				<h3><%= @product.name %></h3>
+				<p><%= @product.description %></p>
+				<p><strong>Colour:</strong> <%= @product.colour %></p>
+			</div>
+		</div>
+	</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+	<div class="container pad-top-half pad-bottom-half new-button">
+    <button class="btn">
+      <a><%= link_to 'Back', products_path %></a>
+    </button>
+  </div>
+</section>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<!--<%= link_to 'Edit', edit_product_path(@product) %>-->

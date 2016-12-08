@@ -22,11 +22,16 @@
   </div>
 
   <div class="field">
+    <%= f.label :colour %><br>
+    <%= f.text_field :colour %>
+
+  <div class="field">
     <%= f.label :image_url %>
     <%= f.text_field :image_url %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <button class=" actions btn">
+    <a><%= f.submit %></a>
+  </button>
+  
 <% end %>

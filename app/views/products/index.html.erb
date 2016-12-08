@@ -25,6 +25,7 @@
           <%= link_to image_tag(product.image_url, class: "img-responsive"), product %>         
           <h5><%= product.name %></h5>
           <p><%= product.description %></p>
+          <p><%= product.colour %></p>
           <span id="prod-details"><%= link_to 'Show', product %></span>
           <span id="prod-details"><%= link_to 'Edit', edit_product_path(product) %></span>
           <span id="prod-details"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></span>

@@ -14,7 +14,7 @@ $yellowish: #FECEA8;
 $retrogreen: #99B898;
 $grey: #aaaaaa;
 
-#new-product, #prod-database {
+#new-product, #prod-database, #prod-show {
 	background-color: $lightpink;
 	padding-bottom: 90px;
 
@@ -64,6 +64,18 @@ span#prod-details {
 				color: $dark-blue;
 			}
 		}
+	}
+}
+
+.actions {
+
+	input {
+		margin-bottom: 0;
+		border-bottom: none;
+		font-weight: 500;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: white;
 	}
 }
 
