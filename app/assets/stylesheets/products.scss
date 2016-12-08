@@ -29,7 +29,7 @@ $grey: #aaaaaa;
 	padding: 15px;
 
 	.img-responsive {
-		max-height: 400px;
+		width: 100%;
 	}
 
 	h5,p,span {
@@ -43,8 +43,6 @@ $grey: #aaaaaa;
 
 span#prod-details {
  	display: inline-block;
- 	margin: auto;
- 	width: 50%;
  	color: $darkergrey;
 
  	a {
@@ -68,6 +66,7 @@ span#prod-details {
 		}
 	}
 }
+
 
 /*.prod-table {
 	th, td {
