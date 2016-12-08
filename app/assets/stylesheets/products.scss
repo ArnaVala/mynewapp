@@ -1,3 +1,4 @@
+
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
@@ -38,8 +39,8 @@ $grey: #aaaaaa;
 	h5 {
 	font-weight: 900;
 	}
-
 }
+
 span#prod-details {
  	display: inline-block;
  	margin: auto;
@@ -48,23 +49,20 @@ span#prod-details {
 
  	a {
  		padding-right: 15px;
-
  	}
 }
  
-.new-button {
 
+/*
+.new-button {
 	.btn {
 		background-color: $darkpink;
 		width: 100px;
-
 		a { 
 			color: white;
 		}
-
 		&:hover {
 			background-color: $lightpink;
-
 			a {
 				text-decoration: none;
 				color: $dark-blue;
@@ -72,21 +70,15 @@ span#prod-details {
 		}
 	}
 }
-
 .prod-table {
-
 	th, td {
 	padding: 30px !important;
 	}
-
 	th {
 		background-color: $dark-blue;
 		color: white;
 	}
-
 	td {
 		border-top: 2px solid white;
 	}
-}
-
-
+}*/
