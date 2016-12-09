@@ -20,13 +20,14 @@ $grey: #aaaaaa;
 
 	@media (min-width: 1024px) {
 		background-color: $lightpink;
-  	background-image: -webkit-linear-gradient(0deg, #ffffff 50%, $lightpink 50%);
-  	height: auto;
+  		background-image: -webkit-linear-gradient(0deg, #ffffff 50%, $lightpink 50%);
+  		height: auto;
 	}
 }
 
 .prod-info {
-	padding: 20px;
+	padding: 10px;
+	height: auto;
 
 	.img-responsive {
 		max-width: 100%;
@@ -34,12 +35,19 @@ $grey: #aaaaaa;
 		width: 100%;
 	}
 
+	.prod-info-inner {
+		padding: 20px;
+		border: 3px solid $lightpink;
+		min-height: 450px;
+
+	}
+
 	h5,p,span {
 		margin-bottom: 12px;
 	}
 
 	h5 {
-	font-weight: 900;
+		font-weight: 900;
 	}
 }
 
@@ -104,3 +112,115 @@ span#prod-details {
 		border-top: 2px solid white;
 	}
 }*/
+
+/*** carousel ***/
+
+.header-caption {
+	font-family: "freight-sans-pro",sans-serif;
+	font-style: normal;
+ 	margin: 0 auto;
+	vertical-align: center;
+	max-width: 100%;
+	top: 33%;
+	position: absolute;
+	text-align: center;
+	z-index: 98;
+	left: 10%;
+	right: 10%;
+}
+
+.carousel {
+	margin-left: -15px;
+  	margin-right: -15px;
+  	height: 100%;
+  	position:relative;
+}
+
+.carousel,.item,.active { 
+	height: 100%;
+}
+
+.carousel-inner {
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+}
+
+.fill {
+	height:100%;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #fff;
+    opacity: .3;
+}
+
+.carousel-caption {
+	color: black;
+	text-decoration: none;
+	text-shadow: none;
+	position: absolute;
+	top: 25%;
+	text-align: center;
+	width: 33%;
+	height: 50%;
+	margin: 0 auto;
+	left: 10%;
+	right: 10%;
+	background-color: rgba($darkpink,.80);
+	padding: 48px 0px;
+
+	h2 {
+	font-weight: 500;
+	font-size: 24px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	padding-bottom: 0.2em;
+	color: white;
+	}
+}
+
+.carousel-caption h3 {
+	color: black;
+}
+
+/*** carousel-control ***/
+.carousel-control.right,
+.carousel-control.left {
+  background-image:none;
+  width: 10%;
+  color: $darkpink;
+  text-decoration: none;
+  text-shadow: none;
+  z-index: 3
+}
+
+.carousel-control.right {
+	right: -100px;
+}
+
+.carousel-control.left {
+	left: -100px;
+}
+
+.carousel-control:hover,
+.carousel-control:focus{
+	opacity: 0.9;
+}
+
+/*** carousel-indicators ***/
+.carousel-indicators li {
+	border-radius: 0;
+	border: 1px solid $darkpink ;
+}
+
+.carousel-indicators .active {
+	background-color: $darkpink;
+}

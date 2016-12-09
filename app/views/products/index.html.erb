@@ -18,18 +18,20 @@
         <th colspan="3"></th>
       </tr>
     </thead>-->
-  <div class="container-fluid white-bg pad-top-half pad-bottom-half prod-display">
+  <div class="container pad-top-half pad-bottom-half prod-display">
     <div class="row">
       <% @products.each do |product| %>
         <div class="col-lg-4 col-md-6 col-md-12 prod-info">
-          <%= link_to image_tag(product.image_url, class: "img-responsive"), product %>         
-          <h5><%= product.colour %> <%= product.name %></h5>
-          <p id="prod-price"><%= product.price %>€</p>
-          <p><%= product.description %></p>
-          <span id="prod-details"><%= link_to 'Show', product %></span>
-          <span id="prod-details"><%= link_to 'Edit', edit_product_path(product) %></span>
-          <span id="prod-details"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-        </div><!--row -->
+          <div class="prod-info-inner white-bg">
+            <%= link_to image_tag(product.image_url, class: "img-responsive"), product %>         
+            <h5><%= product.colour %> <%= product.name %></h5>
+            <p id="prod-price"><%= product.price %>€</p>
+            <p><%= product.description %></p>
+            <span id="prod-details"><%= link_to 'Show', product %></span>
+            <span id="prod-details"><%= link_to 'Edit', edit_product_path(product) %></span>
+            <span id="prod-details"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+          </div><!--div inner-->
+        </div>
       <% end %>
     </div>
   </div> <!--end container -->
