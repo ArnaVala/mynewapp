@@ -9,36 +9,12 @@
       </div>
     </div>
   </div>
-  <!--<table class="container lightgrey-bg prod-table ">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Image url</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>-->
+  
   <div class="container pad-top-half pad-bottom-half prod-display">
     <div class="row">
-      <% @products.each do |product| %>
-        <div class="col-lg-4 col-md-6 col-md-12 prod-info">
-          <div class="prod-info-inner white-bg">
-            <%= link_to image_tag(product.image_url, class: "img-responsive"), product %>         
-            <h5><%= product.colour %> <%= product.name %></h5>
-            <p id="prod-price"><%= product.price %>€</p>
-            <p><%= product.description %></p>
-            <span id="prod-details"><%= link_to 'Show', product %></span>
-            <span id="prod-details"><%= link_to 'Edit', edit_product_path(product) %></span>
-            <span id="prod-details"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-          </div><!--div inner-->
-        </div>
-      <% end %>
+      <%= render @products %>
     </div>
-  </div> <!--end container -->
+  </div>
+      
 </section>
 
-  <!--<div class="container pad-top-half pad-bottom-half new-button">
-    <button class="btn">
-      <a><%= link_to 'New Product', new_product_path %></a>
-    </button>
-  </div>-->
