@@ -7,7 +7,7 @@
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
   
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -28,15 +28,14 @@
               <span class="icon-bar"></span>    
             </button>
             <div class="navbar-logo left">
-              <a href"#">Bike Berlin</a>
+              <a href= "<%= static_pages_landing_page_path %>">Bike Berlin</a>
             </div>
           </div><!-- end navbar-header -->
           <div class="navbar-collapse collapse">
             <ul class="navbar-nav navbar-right">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Link</a></li>
+              <li><a href= "<%= products_path %>">Products</a></li>
+              <li><a href= "<%= static_pages_about_path %>">About</a></li>
+              <li><a href= "<%= static_pages_contact_path %>">Contact</a></li>
             </ul>
           </div>
         </div>
