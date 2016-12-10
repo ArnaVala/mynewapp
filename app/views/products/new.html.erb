@@ -9,18 +9,10 @@
 			</div>
 		</div>
 	</div>
-	<div class="container lightgrey-bg pad-sides pad-top-half pad-bottom-half prod-form">
-		<div class="row">
-			<div class="col-sm-12 pad lightgrey-bg">
-				<div>
-				<%= render 'form', product: @product %>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="container pad-top-half pad-bottom-half new-button">
-    <button class="btn">
-      <a><%= link_to 'Back', products_path %></a>
-    </button>
-  </div>
+		<%= render 'form', product: @product %>
+	<div class="container pad-top-quarter pad-bottom-half">
+    	<div class="btn second-btn">
+      		<a><%= link_to 'Back', products_path %></a>
+    	</div>
+  	</div>
 </section

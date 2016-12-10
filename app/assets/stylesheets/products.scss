@@ -59,35 +59,7 @@ span#prod-details {
  		padding-right: 15px;
  	}
 }
- 
-.new-button {
-	.btn {
-		background-color: $darkpink;
-		width: 100px;
-		a { 
-			color: white;
-		}
-		&:hover {
-			background-color: $lightpink;
-			a {
-				text-decoration: none;
-				color: $dark-blue;
-			}
-		}
-	}
-}
 
-.actions {
-
-	input {
-		margin-bottom: 0;
-		border-bottom: none;
-		font-weight: 500;
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
-		color: white;
-	}
-}
 
 #prod-price {
 	font-size: 18px;
@@ -99,19 +71,6 @@ span#prod-details {
 #prod-colour {
 	font-weight: 900;
 }
-
-/*.prod-table {
-	th, td {
-	padding: 30px !important;
-	}
-	th {
-		background-color: $dark-blue;
-		color: white;
-	}
-	td {
-		border-top: 2px solid white;
-	}
-}*/
 
 /*** carousel ***/
 
@@ -224,4 +183,155 @@ span#prod-details {
 
 .carousel-indicators .active {
 	background-color: $darkpink;
+}
+
+
+/*PRODUCT FORMS*/
+
+.container.prod-forms {
+	padding: 30px;
+	background-color: white;
+	border: 3px solid $lightpink;
+
+	.row {
+		padding: 30px;
+
+		#inner-form {
+			padding: 30px;
+			text-align: left;
+		}
+	}
+}
+
+.pads {
+	padding: 30px;
+}
+
+
+div.actions {
+	background-color: $darkpink;
+	padding: 0 12px;
+	border-radius: 0px;
+
+  input {
+		margin-bottom: 0;
+		border-bottom: none;
+		margin-bottom: 0px;	
+		border-bottom: none;
+		padding: 0px;
+
+		font-weight: 500;
+		text-transform: uppercase;
+		color: white;
+		letter-spacing: 0.1em;
+	}
+		
+	&:hover {
+		background-color: white;
+		border: 3px solid $darkpink; 
+		
+		input {
+			color: $darkpink;
+			font-weight: 900;
+			letter-spacing: 0.1em;
+			text-decoration: none;
+		}
+	}
+}
+
+div.field {
+	background-color: white;
+	color: $dark-blue;
+	margin-bottom: 36px;
+	padding: 12px;
+	border-bottom: 2px solid $grey;
+	border-right: 2px solid $grey;
+
+	label {
+		margin-bottom: 6px;
+		font-weight: 900;
+		letter-spacing: 0.05em;
+		color: $darkpink;
+		text-transform: uppercase;
+	}
+
+	input, textarea {
+		border-top: 4px solid $darkpink;
+		background-color: white;
+		margin-bottom: 0px;	
+		border-bottom: none;
+		padding: 6px;
+		line-height: 14px;
+	}
+}
+
+/*BUTTONS*/
+
+.btn.second-btn {
+	background-color: $teal;
+	width: 100px;
+	border-radius: 0px;
+
+	a { 
+		color: white;
+		font-weight: 500px;
+		letter-spacing: 0.1em;
+	}
+
+	&:hover {
+		background-color: white;
+		border: 2px solid $teal; 
+
+		a {
+			text-decoration: none;
+			color: $teal;
+			font-weight: 900;
+			letter-spacing: 0.1em;
+		}
+	}
+}
+
+/*SEARCH FORM*/
+
+.search-form {
+	width: 300px;
+	display: inline;
+	box-shadow: none ;
+	font-size: 12px;
+	color: $darkergrey;
+
+
+	input, textarea {
+    	font-weight: 300;
+    	width: 100px;
+    	border: 2px solid $darkpink;
+    	margin-bottom: 0px;
+    	font-size: 12px;
+    	line-height: 24px;
+    	height: auto;
+    	padding: 0;
+ 	}
+
+ 	input#search-btn {
+ 		background-color: $darkpink;
+ 		color: white;
+ 		width: auto;
+ 		padding: 0 6px;
+
+ 	}
+
+ 	label {
+ 		margin-bottom: 0px;
+ 		width: auto;
+ 		line-height: 28px;
+    	height: auto;
+    	padding: 0 6px;
+ 	}
+
+ 	input#q {
+ 		width: 200px;
+ 		color: black;
+ 		padding: 0 6px;
+ 		background-color: white;
+ 	}
 }
