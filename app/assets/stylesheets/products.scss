@@ -265,6 +265,49 @@ div.field {
 	}
 }
 
+/*CONTACT FORM*/
+
+.container.contact-form {
+	padding: 30px;
+	background-color: white;
+	border: 3px solid $lightpink;
+
+	@media (min-width: 1024px) {
+  		width: 50%;
+
+	}
+
+	.row {
+		padding: 30px;
+
+		#inner-form {
+			padding: 30px;
+			text-align: left;
+		}
+	}
+}
+
+.form-group {
+
+	background-color: white;
+	padding: 12px 24px;
+	margin-bottom: 24px;
+	text-align: left;
+
+	.form-control {
+		border: none;
+		border-radius: 0px;
+		border-top: 4px solid $darkpink;
+		background-color: white;
+		margin-bottom: 0px;	
+		border-bottom: none;
+		padding: 12px 0px;
+		line-height: 24px;
+	}
+}
+
+
+
 /*BUTTONS*/
 
 .btn.second-btn {
@@ -315,6 +358,8 @@ div.field {
  	input#search-btn {
  		background-color: $darkpink;
  		color: white;
+ 		text-transform: uppercase;
+ 		letter-spacing: 0.05em;
  		width: auto;
  		padding: 0 6px;
 
@@ -334,4 +379,9 @@ div.field {
  		padding: 0 6px;
  		background-color: white;
  	}
+}
+
+h3#contact-note {
+	font-weight: 500;
+	padding-bottom: 30px;
 }
