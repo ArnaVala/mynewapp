@@ -77,8 +77,8 @@ $grey: #aaaaaa;
 body {
 	color: $darkergrey;
 	background-color: white;
-  width: 100%;
-  margin-top: 90px;
+  	width: 100%;
+  	margin-top: 72px;
 
 	/*@media (min-width: 992px) {
 		color: $darkergrey;
@@ -442,10 +442,12 @@ a {
 
 	@media (min-width: 1024px) {
 		background-color: $lightpink;
-  	background-image: -webkit-linear-gradient(0deg, #ffffff 50%, $lightpink 50%);
-  	height: auto;
+  		background-image: -webkit-linear-gradient(0deg, #ffffff 50%, $lightpink 50%);
+  		height: auto;
 	}
 }
+
+
 
 /*CONTACT*/
 
@@ -490,10 +492,10 @@ form {
 	text-decoration: none;
 	color: #E84A5F;
 	background: transparent;
-  transition-property: all;
-  transition-duration: 0.6s;
-  transition-timing-function: ease-in-out;
-  transition-delay: initial;
+	transition-property: all;
+	transition-duration: 0.6s;
+	transition-timing-function: ease-in-out;
+	transition-delay: initial;
 
 	&:hover {
 		background: #E84A5F;
