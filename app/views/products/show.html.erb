@@ -16,12 +16,24 @@
 			<div class="col-md-7 col-sm-12 prod-info">
 				<%= link_to image_tag(@product.image_url, class: "img-responsive") %>
 			</div>
-			<div class="col-md-5 col-sm-12 text-under bottom-align-text">
-				<h3><%= @product.colour %> <%= @product.name %></h3>
+			<div class="col-md-5 col-sm-12 bike-text">
+				<h3><%= @product.name %></h3>
+        <hr class="style1">
+        <p><strong><%= @product.description %></strong></p>
+        <hr class="style2">
+        <p><%= @product.colour %></p>
+        <hr class="style2">
         <p id="prod-price"><%= @product.price %>€</p>
-        <p><%= @product.description %></p>
+        <hr class="style3">
+        <p id="comment"><%= @product.highest_rating_comment %></p>
+        <br>
 			</div>
 		</div>
+    <div class="row comment">
+      <div class="col-md-7">
+        <h5>User comments</h5>
+      </div>
+    </div>
 	</div>
 
 	<div class="container pad-top-half pad-bottom-half">

@@ -62,15 +62,49 @@ span#prod-details {
 
 
 #prod-price {
-	font-size: 18px;
+	font-size: 24px;
 	color: $darkpink;
 	font-weight: 700;
-	text-transform: uppercase;
+	padding-top: 24px;
 }
 
 #prod-colour {
 	font-weight: 900;
 }
+
+p#comment {
+	color: grey;
+}
+
+
+.bikes .bike-text
+
+	h2,h3,h4,h4,h6,p {
+		margin-bottom: 0 !important;
+		text-align: left;
+		line-height: 24px;
+	}
+
+	hr {
+		margin: 12px 0;
+
+		&.style1 {
+			border-top: 5px solid $darkpink;
+			margin-top: 0;
+			margin-bottom: 24px;
+		}
+
+		&.style2 {
+			border-top: 2px dotted $lightgrey;
+		}
+
+		&.style3 {
+			border-top: 3px solid black;
+		}
+	}
+
+
+/*comments*/
 
 /*** carousel ***/
 
@@ -474,3 +508,13 @@ h3#contact-note {
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
