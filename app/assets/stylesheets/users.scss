@@ -1,3 +1,135 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/*LOGIN PAGE*/
+/*VARIABLES*/
+$dark-blue: #2A363B;
+$teal: #136477;
+$lightgrey: #f1f1f1;
+$silver: #f0f4f4;
+$darkergrey: #2A363B;
+$darkpink: #E84A5F;
+$lightpink: #FF847C;
+$yellowish: #FECEA8;
+$retrogreen: #99B898;
+$grey: #aaaaaa;
+
+#login-page, #signup-page, #login-edit {
+	background-color: $teal;
+	padding-bottom: 90px;
+	padding-top: 90px;
+	font-family: "freight-sans-pro", sans-serif;
+
+	@media (min-width: 1024px) {
+  		height: auto;
+	}
+}
+
+.container.login-form, .container.signup-form, .container.loginedit-form {
+	max-width: 400px;
+	margin: 0 auto;
+	text-align: left;
+	padding: 30px;
+	background-color: $lightgrey;
+	border: 5px solid white;
+
+	#inner-form {
+		padding: 0px;
+
+		
+		div.field {
+			margin-bottom: 12px;
+			border: none;
+
+			label {
+				text-transform: none;
+				font-weight: 700;
+				letter-spacing: 0.05em; 
+				font-size: 16px;
+			}
+		}
+
+		div.checkbox {
+			background-color: none;
+			position: relative;
+			display: block;
+			height: 24px;
+			line-height: 24px;
+			margin-bottom: 12px;
+
+			input {
+				position: absolute;
+				margin: 0;
+				height: 24px;
+				border: 2px solid $darkpink;
+				border-radius: 0;
+			}
+
+			label {
+				text-transform: none;
+				padding-left: 30px;
+				margin-bottom: 0;
+				font-weight: 900;
+				display: inline-block;
+			}
+		}
+
+		div.actions {
+			margin-bottom: 12px;
+		}
+
+		i {
+			color: $grey;
+			font-size: 12px;
+			line-height: 12px;
+		}
+	}
+
+	form.button_to {
+		background-color: white;
+		border: 3px solid $lightpink;
+		border-radius: 0px;
+		width: 100%;
+
+		input {
+			line-height: 24px;
+			border: 0;
+			margin: 0;
+			padding: 6px;
+			color: $lightpink;
+			letter-spacing: 0.05em;
+		}
+	}
+}
+
+
+/*USERS SHOW EDIT*/
+
+/*alerts*/
+
+p#alert.alert.alert-warning {
+		
+	background-color: $lightpink;
+	font-family: "freight-sans-pro", sans-serif;
+	font-weight: 700;
+	color: $teal;
+	max-width: 400px;
+	text-align: center;
+	margin: auto;
+	padding-top: 36px;
+	line-height: 24px;
+}
+
+p#notice.alert.alert-info {
+		
+	background-color: $teal;
+	font-family: "freight-sans-pro", sans-serif;
+	font-weight: 500;
+	color: white;
+	max-width: 400px;
+	text-align: center;
+	margin: auto;
+	padding-top: 36px;
+	line-height: 24px;
+}
+
