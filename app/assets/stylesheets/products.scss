@@ -42,6 +42,14 @@ $grey: #aaaaaa;
 
 	}
 
+	p#prod-price {
+			font-size: 24px;
+			font-weight: 700;
+			text-transform: normal;
+			color: $darkpink;
+			padding-bottom: 18px;
+		}
+
 	h5,p,span {
 		margin-bottom: 12px;
 	}
@@ -60,20 +68,8 @@ span#prod-details {
  	}
 }
 
-
-#prod-price {
-	font-size: 24px;
-	color: $darkpink;
-	font-weight: 700;
-	padding-top: 24px;
-}
-
 #prod-colour {
 	font-weight: 900;
-}
-
-p#comment {
-	color: grey;
 }
 
 
@@ -85,13 +81,28 @@ p#comment {
 		line-height: 24px;
 	}
 
+	h3#prod-title {
+		font-weight: 500;
+		text-transform: uppercase;
+	}
+
+	p#prod-price {
+		font-size: 36px;
+		font-weight: 700;
+		text-transform: normal;
+		color: $darkpink;
+	}
+
+	p#comment {
+		color: grey;
+	}
+
 	hr {
 		margin: 12px 0;
 
 		&.style1 {
-			border-top: 5px solid $darkpink;
-			margin-top: 0;
-			margin-bottom: 24px;
+			border-top: 3px solid $darkpink;
+			margin-top: 36px;
 		}
 
 		&.style2 {
@@ -100,9 +111,9 @@ p#comment {
 
 		&.style3 {
 			border-top: 3px solid black;
+			margin-top: 0;
 		}
 	}
-
 
 /*comments*/
 
