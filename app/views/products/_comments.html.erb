@@ -3,10 +3,11 @@
         <div class="row">
             <hr class="style2">
             <div class="comment-container">
-              <p><%= comment.user.first_name %><small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small></p>
+              <%= comment.user.first_name %><small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small>
               <div class="rated" data-score="<%= comment.rating %>"></div>
               <%= comment.body %>
             </div>
         </div>
     <% end %>
+    <%= will_paginate @comments %>
 </div>
