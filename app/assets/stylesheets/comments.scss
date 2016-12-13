@@ -1,0 +1,53 @@
+// Place all the styles related to the comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*VARIABLES*/
+$dark-blue: #2A363B;
+$teal: #136477;
+$lightgrey: #f1f1f1;
+$silver: #f0f4f4;
+$darkergrey: #2A363B;
+$darkpink: #E84A5F;
+$lightpink: #FF847C;
+$yellowish: #FECEA8;
+$retrogreen: #99B898;
+$grey: #aaaaaa;
+
+
+.user-comments {
+	padding: 24px 10px;
+	margin: 0;
+
+	h6 {
+		padding-bottom: 24px;
+	}
+
+	label {
+		margin-bottom: 12px;
+	}
+
+	textarea {
+		border: 2px solid $lightgrey;
+		border-radius: 0px;
+		margin-bottom: 12px;
+	}
+
+	div.rating {
+		margin-bottom: 24px;
+	}
+
+	input.btn.btn-default {
+		border: 2px solid $lightgrey;
+		background-color: $lightgrey;
+		color: black;
+		font-weight: 500;
+		letter-spacing: 0.1em;
+
+
+		&:hover {
+			background-color: $lightpink;
+		}
+	}
+
+}

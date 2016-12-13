@@ -42,6 +42,14 @@ $grey: #aaaaaa;
 
 	}
 
+	p#prod-price {
+			font-size: 24px;
+			font-weight: 700;
+			text-transform: normal;
+			color: $darkpink;
+			padding-bottom: 18px;
+		}
+
 	h5,p,span {
 		margin-bottom: 12px;
 	}
@@ -60,17 +68,54 @@ span#prod-details {
  	}
 }
 
-
-#prod-price {
-	font-size: 18px;
-	color: $darkpink;
-	font-weight: 700;
-	text-transform: uppercase;
-}
-
 #prod-colour {
 	font-weight: 900;
 }
+
+
+.bikes .bike-text
+
+	h2,h3,h4,h4,h6,p {
+		margin-bottom: 0 !important;
+		text-align: left;
+		line-height: 24px;
+	}
+
+	h3#prod-title {
+		font-weight: 500;
+		text-transform: uppercase;
+	}
+
+	p#prod-price {
+		font-size: 36px;
+		font-weight: 700;
+		text-transform: normal;
+		color: $darkpink;
+	}
+
+	p#comment {
+		color: grey;
+	}
+
+	hr {
+		margin: 12px 0;
+
+		&.style1 {
+			border-top: 3px solid $darkpink;
+			margin-top: 36px;
+		}
+
+		&.style2 {
+			border-top: 2px dotted $lightgrey;
+		}
+
+		&.style3 {
+			border-top: 3px solid black;
+			margin-top: 0;
+		}
+	}
+
+/*comments*/
 
 /*** carousel ***/
 
@@ -384,5 +429,90 @@ h3#contact-note {
 	padding-bottom: 30px;
 }
 
+#login-page, #signup-page, #login-edit {
+	background-color: $teal;
+	padding-bottom: 90px;
+	padding-top: 90px;
+	font-family: "freight-sans-pro", sans-serif;
 
+	@media (min-width: 1024px) {
+  		height: auto;
+	}
+}
 
+.container.login-form, .container.signup-form, .container.loginedit-form {
+	max-width: 400px;
+	margin: 0 auto;
+	text-align: left;
+	padding: 30px;
+	background-color: $lightgrey;
+	border: 5px solid white;
+
+	#inner-form {
+		padding: 0px;
+
+		
+		div.field {
+			margin-bottom: 12px;
+			border: none;
+
+			label {
+				text-transform: none;
+				font-weight: 700;
+				letter-spacing: 0.05em; 
+				font-size: 16px;
+			}
+		}
+
+		div.checkbox {
+			background-color: none;
+			position: relative;
+			display: block;
+			height: 24px;
+			line-height: 24px;
+			margin-bottom: 12px;
+
+			input {
+				position: absolute;
+				margin: 0;
+				height: 24px;
+				border: 2px solid $darkpink;
+				border-radius: 0;
+			}
+
+			label {
+				text-transform: none;
+				padding-left: 30px;
+				margin-bottom: 0;
+				font-weight: 900;
+				display: inline-block;
+			}
+		}
+
+		div.actions {
+			margin-bottom: 12px;
+		}
+
+		i {
+			color: $grey;
+			font-size: 12px;
+			line-height: 12px;
+		}
+	}
+
+	form.button_to {
+		background-color: white;
+		border: 3px solid $lightpink;
+		border-radius: 0px;
+		width: 100%;
+
+		input {
+			line-height: 24px;
+			border: 0;
+			margin: 0;
+			padding: 6px;
+			color: $lightpink;
+			letter-spacing: 0.05em;
+		}
+	}
+}
