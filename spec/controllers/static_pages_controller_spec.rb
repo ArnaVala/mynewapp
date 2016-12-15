@@ -17,3 +17,4 @@ describe StaticPagesController, :type => :controller do
 	end
 
 end
+

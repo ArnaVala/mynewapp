@@ -23,7 +23,6 @@ describe Product do
 	context "when user is not valid" do
 		it "check the user validation" do
 			expect(User.new(password: "ABCDEF")).not_to be_valid
-			expect(User.new(email: "test@test.com")).not_to be_valid
 		end
 	end
 
