@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.3.0'
 
-
 gem 'will_paginate', '~> 3.1.0'
 gem 'cancancan', '~> 1.10'
 gem 'devise'
@@ -57,3 +56,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :production do
 	gem 'pg'
 end
+
+gem 'rails-controller-testing'
+
