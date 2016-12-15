@@ -2,7 +2,7 @@
   <div class="prod-info-inner white-bg">
     <%= link_to image_tag(product.image_url, class: "img-responsive"), product %>         
     <h5><%= product.colour %> <%= product.name %></h5>
-    <p id="prod-price"><%= product.price %>€</p>
+    <p id="prod-price"><%= product.price %>&euro;</p>
     <p><%= product.description %></p>
     <span id="prod-details"><%= link_to 'Show', product %></span>
     <span id="prod-details"><%= link_to 'Edit', edit_product_path(product) %></span>

@@ -25,13 +25,12 @@
         <hr class="style2">
         <p><%= @product.colour %></p>       
         <hr class="style1">
-        <p id="prod-price"><%= @product.price %>€</p>
 			</div>
       <div class="prod-price-container">
-        <%= @product.price %>
-        <span class="glyphicon glyphicon-euro" aria-hidden="true"></span>
+        <p id="prod-price"><%= @product.price %><span class="glyphicon glyphicon-euro" aria-hidden="true"></span></p>
       </div>
       <%= form_tag "/payments/create" do %>
+        <%= hidden_field_tag(:product_id, @product.id) %>
         <%= render partial: "shared/stripe_checkout_button" %>
       <% end %>
       <div class="user-comments col-md-7 col-sm-12">
