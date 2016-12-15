@@ -30,10 +30,10 @@
       <div class="prod-price-container">
         <%= @product.price %>
         <span class="glyphicon glyphicon-euro" aria-hidden="true"></span>
-        <%= form_tag "/payments/create" do %>
-          <%= render partial: "shared/stripe_checkout_button" %>
-        <% end %>
       </div>
+      <%= form_tag "/payments/create" do %>
+        <%= render partial: "shared/stripe_checkout_button" %>
+      <% end %>
       <div class="user-comments col-md-7 col-sm-12">
           <%= render "products/new_comment" %>
           <%= render "products/comments" %>
