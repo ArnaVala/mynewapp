@@ -60,4 +60,5 @@ group :production do
 end
 
 gem 'rails-controller-testing'
+gem 'brakeman', :require => false
 
