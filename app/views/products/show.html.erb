@@ -14,7 +14,7 @@
   <div class="container white-bg pad-top-half pad-bottom-quarter">
 		<div class="row bikes">
 			<div class="col-md-7 col-sm-12 prod-info">
-				<%= link_to image_tag(@product.image_url, class: "img-responsive") %>
+				<%= image_tag("#{@product.image_url}", class: "img-responsive img-zoom", data_zoom_image: "#{@product.image_url}") %>
 			</div>
 			<div class="col-md-5 col-sm-12 bike-text">
 				<h3 id="prod-title"><%= @product.name %></h3>
