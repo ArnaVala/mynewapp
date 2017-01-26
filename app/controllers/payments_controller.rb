@@ -6,7 +6,7 @@ class PaymentsController < ApplicationController
 	#create the ccharge on Stripes servers - this will charge the user's card
 		begin
 			charge = Stripe::Charge.create(
-				:amount => @product.price * 100, #amount in cents
+				:amount => @product.price *100, #amount in cents
 				:currency => "usd",
 				:source => token,
 				:description => params[:stripeEmail]
