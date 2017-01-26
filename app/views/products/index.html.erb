@@ -12,9 +12,11 @@
   
   <div class="container pad-top-half pad-bottom-half prod-display">
     <div class="row">
-      <%= render @products %>
+      <% cache(cache_key_for_products) do %>
+        <%= render @products %>
+      <% end %>
     </div>
   </div>
-      
+  <%= link_to 'New Product', new_product_path %>
 </section>
 

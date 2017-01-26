@@ -1,13 +1,15 @@
-<div class="col-lg-4 col-md-6 col-sm-12 prod-info">
-  <div class="prod-info-inner white-bg">
-    <%= link_to image_tag(product.image_url, class: "img-responsive"), product %>         
-    <h5><%= product.colour %> <%= product.name %></h5>
-    <p id="prod-price"><%= product.price %>&euro;</p>
-    <p><%= product.description %></p>
-    <span id="prod-details"><%= link_to 'Show', product %></span>
-    <% if signed_in? && current_user.admin? %>
-    <span id="prod-details"><%= link_to 'Edit', edit_product_path(product) %></span>
-    <span id="prod-details"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-    <% end %>
-  </div><!--div inner-->
-</div>
+<% cache product do %>
+		<div class="col-lg-4 col-md-6 col-sm-12 prod-info">
+			<div class="prod-info-inner white-bg">
+				<%= link_to image_tag(product.image_url, class: "img-responsive"), product %>         
+				<h5><%= product.colour %> <%= product.name %></h5>
+				<p id="prod-price"><%= product.price %>&euro;</p>
+				<p><%= product.description %></p>
+				<span id="prod-details"><%= link_to 'Show', product %></span>
+				<% if signed_in? && current_user.admin? %>
+				<span id="prod-details"><%= link_to 'Edit', edit_product_path(product) %></span>
+				<span id="prod-details"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+				<% end %>
+			</div><!--div inner-->
+		</div>
+<% end %>

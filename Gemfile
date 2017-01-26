@@ -61,4 +61,6 @@ end
 
 gem 'rails-controller-testing'
 gem 'brakeman', :require => false
+gem 'memcachier'
+gem 'dalli'
 

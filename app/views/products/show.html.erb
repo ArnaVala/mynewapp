@@ -13,31 +13,34 @@
 
   <div class="container white-bg pad-top-half pad-bottom-quarter">
 		<div class="row bikes">
-			<div class="col-md-7 col-sm-12 prod-info">
-				<%= image_tag("#{@product.image_url}", class: "img-responsive img-zoom", data_zoom_image: "#{@product.image_url}") %>
-			</div>
-			<div class="col-md-5 col-sm-12 bike-text">
-				<h3 id="prod-title"><%= @product.name %></h3>
-        <hr class="style3">
-        <p>Average Rating: <div class="rated" id="average-rating"
-        data-score="<%= @product.average_rating %>"></div></p>
-        <hr class="style2">
-        <p><strong><%= @product.description %></strong></p>
-        <hr class="style2">
-        <p><%= @product.colour %></p>       
-        <hr class="style1">
-			</div>
-      <div class="prod-price-container">
-        <p id="prod-price"><%= @product.price %><span class="glyphicon glyphicon-euro" aria-hidden="true"></span></p>
-      </div>
-      <%= form_tag "/payments/create" do %>
-        <%= hidden_field_tag(:product_id, @product.id) %>
-        <%= render partial: "shared/stripe_checkout_button" %>
+      <% cache @product do %>
+  			<div class="col-md-7 col-sm-12 prod-info">
+  				<%= image_tag("#{@product.image_url}", class: "img-responsive img-zoom", data_zoom_image: "#{@product.image_url}") %>
+  			</div>
+  			<div class="col-md-5 col-sm-12 bike-text">
+  				<h3 id="prod-title"><%= @product.name %></h3>
+          <hr class="style3">
+          <p>Average Rating: <div class="rated" id="average-rating"
+          data-score="<%= @product.average_rating %>"></div></p>
+          <hr class="style2">
+          <p><strong><%= @product.description %></strong></p>
+          <hr class="style2">
+          <p><%= @product.colour %></p>       
+          <hr class="style1">
+  			</div>
+        <div class="prod-price-container">
+          <span class="glyphicon glyphicon-euro" aria-hidden="true"></span>
+          <%= @product.price %>
+          <%= form_tag "/payments/create" do %>
+            <%= hidden_field_tag(:product_id, @product.id) %>
+            <%= render partial: "shared/stripe_checkout_button" %>
+          <% end %>
+        </div>
+        <div class="user-comments col-md-7 col-sm-12">
+            <%= render "products/new_comment" %>
+            <%= render "products/comments" %>
+        </div>
       <% end %>
-      <div class="user-comments col-md-7 col-sm-12">
-          <%= render "products/new_comment" %>
-          <%= render "products/comments" %>
-      </div>
     </div>
 	</div>
 
