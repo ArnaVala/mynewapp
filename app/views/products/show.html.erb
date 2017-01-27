@@ -36,12 +36,13 @@
             <%= hidden_field_tag(:product_id, @product.id) %>
           <% end %>
         </div>
-        <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
-        <div class="user-comments col-md-7 col-sm-12">
-            <%= render "new_comment" %>
-            <%= render "comments" %>
-        </div>
       <% end %>
+
+      <div class="user-comments col-md-7 col-sm-12">
+      <%= render "new_comment" %>
+        <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+        <%= render "comments" %>
+      </div> 
     </div>
 	</div>
 
