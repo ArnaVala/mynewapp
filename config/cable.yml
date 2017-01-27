@@ -5,5 +5,5 @@ test:
   adapter: async
 
 production:
-  adapter: redis
-  url: redis://localhost:6379/1
+  adapter: postgresql
+  url: postgres://pjmmfcoikjivhe:560a0a57ce030aa3a15ed36ea82387c1eddeee910a67c0dce8a9f39d2332f5b8@ec2-54-163-254-48.compute-1.amazonaws.com:5432/d40f7i4l15edpn
