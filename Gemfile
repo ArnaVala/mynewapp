@@ -64,4 +64,5 @@ gem 'brakeman', :require => false
 gem 'memcachier'
 gem 'dalli'
 gem 'redis-rails'
+gem 'newrelic_rpm'
 
