@@ -63,4 +63,5 @@ gem 'rails-controller-testing'
 gem 'brakeman', :require => false
 gem 'memcachier'
 gem 'dalli'
+gem 'redis-rails'
 
