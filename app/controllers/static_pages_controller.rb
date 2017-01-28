@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  
+
   def index
   end
 
@@ -8,7 +8,6 @@ class StaticPagesController < ApplicationController
   	@products = Product.limit(3)
 	end
 
-
   def thank_you
   	@name = params[:name]
   	@email = params[:email]
@@ -16,6 +15,9 @@ class StaticPagesController < ApplicationController
   	UserMailer.contact_form(@email, @name, @message).deliver_now
   end
 
+  def redirect_me
+    redirect_to "/static_pages/landing_page"
+  end
 end 
 
  #ActionMailer::Base.mail(:from => @email,
