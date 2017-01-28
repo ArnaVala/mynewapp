@@ -12,12 +12,14 @@ Rails.application.routes.draw do
   mount ActionCable.server => '/cable'
 
   get 'static_pages/about'
+
   get 'static_pages/contact'
+  post 'static_pages/thank_you'
+
   get 'static_pages/index'
   get 'static_pages/landing_page'
 
-  post 'static_pages/thank_you'
-  post 'payments/create'
+  post '/payments/create'
 
   root 'static_pages#landing_page'
 
