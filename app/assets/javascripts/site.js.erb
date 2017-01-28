@@ -9,6 +9,8 @@ var refreshRating = function() {
 };
 	
 $(document).on('turbolinks:load', function() {
+	$(".alert").fadeIn("slow").delay(1000).fadeOut(1500);
+	
 	refreshRating();
 
 	$('.img-zoom').elevateZoom();
