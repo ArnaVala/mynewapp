@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :comments
   end
   resources :users
+  resources :payments, only:[:create]
 
   resources :orders, only: [:index, :show, :create, :destroy]
 
