@@ -12,7 +12,7 @@
   </div>
 
   <div class="container white-bg pad-top-half pad-bottom-quarter">
-		<div class="row bikes">
+		<div class="row bikes" data-product-id="<%= @product_id %>">
       <% cache @product do %>
   			<div class="col-md-7 col-sm-12 prod-info">
   				<%= image_tag("#{@product.image_url}", class: "img-responsive img-zoom", data_zoom_image: "#{@product.image_url}") %>
