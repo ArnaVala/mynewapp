@@ -1,9 +1,7 @@
-Hei. I'm Arna Vala.
+# Bike Berlin 
+### E-commerce site using Ruby on Rails MVC pattern.
+Additional features include user authentication, mailers, Stripe payment, real-time product comments, and ratings.
 
-I'm studying to become a web developer at Career Foundry.
-
-I am building my first app with Ruby on Rails.
-
-Looking forward to it.
+### Final project for Web Developer Intensive Course at CareerFoundry.
 
 
